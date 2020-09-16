@@ -1,11 +1,29 @@
 <html>
     <head>
-        <script type="text/javascript" src='./js/circuit.js'>
-        </script>
     </head>
     <body>
-
+        <div class="left">
         <input id="data" type="text" name="name" style="width:500px; height:500px;"/>
-        <input type="submit" value="无需输入即可测试" onclick="main()"/>
+        <input style="margin: 3px;background: none;width: 158px;height: 30px;border: 2px solid #000;border-radius: 5px;"type="submit" value="无需输入即可测试" onclick="main()"/>
+        </div>
+        <div id="circuit" class="right">
+            <p>数字电路模拟输出</p>
+        </div>
     </body>
+    <script type="text/javascript" src='./js/circuit.js'>
+    </script>
+    <style>
+.left{
+    display:flex;
+    flex-direction:column;
+    width:60%
+}
+.right{
+    width:50%
+}
+body{
+display:flex;
+flex-direction:row
+}
+    </style>
 </html>
