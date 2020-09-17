@@ -1,29 +1,46 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, 
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=0">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <script type="text/javascript" src='./js/circuit.js'>
+        </script>
     </head>
     <body>
+        <h1 style="
+    text-align: center;
+    font-size: 20px;
+    font-family: cursive;
+">circuit-simulation</h1>
+        <div class="circuit" style="
+    width: 100%;
+    display: flex;
+    ">
         <div class="left">
-        <input id="data" type="text" name="name" style="width:500px; height:500px;"/>
-        <input style="margin: 3px;background: none;width: 158px;height: 30px;border: 2px solid #000;border-radius: 5px;"type="submit" value="无需输入即可测试" onclick="main()"/>
+        <textarea id="data" type="text" name="name" style="margin: 10px;height: 50%;border: 2px solid;border-radius: 5px;"></textarea>
+        <input style="font-weight: 500;font-size: 15px;margin: 0 auto;height: 40px;width: 130px;background: none;border: 2px solid #000;border-radius: 5px;" type="submit" value="test" onclick="main()">
         </div>
         <div id="circuit" class="right">
-            <p>数字电路模拟输出</p>
+            <h1 style="font-size: 15px;">output</h1>
         </div>
-    </body>
-    <script type="text/javascript" src='./js/circuit.js'>
-    </script>
+    </div>
+    
     <style>
-.left{
+    .left{
     display:flex;
     flex-direction:column;
-    width:60%
-}
-.right{
     width:50%
-}
-body{
-display:flex;
-flex-direction:row
-}
+    }
+    .right{
+    width:50%;
+    text-align: center;
+    }
+    .circuit{
+    display:flex;
+    flex-direction:row;
+    height: 100%;
+    }
     </style>
 </html>

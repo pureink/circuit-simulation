@@ -23,6 +23,14 @@ function b64_to_utf8(str) {
 function looseJsonParse(obj) {
     return Function('"use strict";' + obj)();
 }
+function looseParse(obj, str) {
+    return Function('"use strict";' + str)(obj);
+}
+let testjson = "let out=";
+let test = {
+    a: 2,
+    b: 3
+};
 const modules = [
     {
         "m_id": "m001",

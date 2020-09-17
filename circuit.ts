@@ -24,7 +24,14 @@ sec.innerHTML+=JSON.stringify(array[j]).replace(/[\\]/g,'')+"</br>"
 function looseJsonParse(obj:string){
     return Function('"use strict";'+obj)();
 }
-
+function looseParse(obj:object,str:string){
+    return Function('"use strict";'+str)(obj);
+}
+let testjson="let out="
+let test={
+    a:2,
+    b:3
+}
 //拥有两个数组包括模块和导线的集合
 //模块记录id 类型 名称 函数 上下链接模块位置，输入端口个数 输出端口（位宽和名称信息）
 //对每个模块先判断输入是否足够，足够的话输入对象转换为数字类型进行函数运算，转换为string类型根据位宽进行修整(同时根据port的toname修改对象属性名称)，转递给下一个
